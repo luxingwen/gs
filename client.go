@@ -44,8 +44,6 @@ func (c *Client) Close() {
 	c.closeOnece.Do(func() {
 		atomic.StoreInt32(&c.closeFlag, 1)
 		close(c.closeChan)
-		close(c.recv)
-		close(c.secv)
 		c.server.RemoveClient(c.id)
 		c.callBack.OnClose(c)
 		c.conn.Close()
