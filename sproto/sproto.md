@@ -1,6 +1,7 @@
 引用：<https://github.com/xjdrew/gosproto>
 
 
+采用大端字节序
 
 数据包
 
