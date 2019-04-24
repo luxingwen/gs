@@ -1,0 +1,37 @@
+
+# 登入游戏
+login 10001{
+	request {
+		uid 0 : string
+	}
+	response {
+		errcode 	0 : integer
+		info 		1 : UserInfo
+	}
+}
+
+# 注册游戏角色
+register 10002 {
+	request {
+		uid 	0: string
+		name  	1: string
+		head 	2: string
+	}
+	response {
+		errcode 	0 : integer
+		info 		1 : UserInfo
+	}
+}
+
+# 用户信息
+.UserInfo {
+	uid 				0 	: string             	 # uid
+	number 				1 	: integer             	 # 编号
+	name 				2 	: string                 # 名字
+	head 				3 	: string                 # 头像
+	gold 				4 	: integer                # 金币
+	diamond 			5 	: integer        	     # 钻石
+	level 				6 	: integer                # 等级
+	exp 				7 	: integer                # 经验
+	energy 				8 	: integer              	 # 体力
+}
